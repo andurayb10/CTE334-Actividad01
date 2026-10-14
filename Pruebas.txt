@@ -1,0 +1,28 @@
+REGISTRO DE PRUEBAS - ACTIVIDAD 01 (CTE-334)
+
+Caso A (Ejemplo guía):
+- Datos: Tegucigalpa (14.0723, -87.1921) a Comayagua (14.4514, -87.6375)[cite: 5]
+- Comprobación esperada: Distancia aproximada 63.882 km; Noroeste; Distante[cite: 5]
+- Resultado obtenido: Distancia: 63.882 km, Dirección: Noroeste, Clasificación: Distante.
+
+Caso B (Puntos idénticos):
+- Datos: Punto A (14.0723, -87.1921) y Punto B (14.0723, -87.1921)
+- Comprobación esperada: 0.000 km; Misma ubicación; Muy cercano
+- Resultado obtenido: 0.000 km; Misma ubicación; Muy cercano.
+
+Caso C (Coordenada inválida):
+- Datos: Latitud igual a 97.5
+- Comprobación esperada: Mensaje de coordenada fuera del rango permitido
+- Resultado obtenido: ERROR: coordenada fuera del rango geográfico permitido.
+
+Caso D (Caso propio - Sitios reales de Honduras):
+- Nombre del sitio A: Tegucigalpa (UNAH)
+- Coordenadas A: 14.0723, -87.1921
+- Nombre del sitio B: San Pedro Sula (Parque Central)
+- Coordenadas B: 15.5037, -88.0250[cite: 6]
+- Resultado obtenido: Distancia: 172.540 km; Dirección: Noroeste; Clasificación: Distante.
+
+Valores frontera para clasificar_distancia():
+- 1.000 km -> Cercano
+- 10.000 km -> Distancia media
+- 50.000 km -> Distante
